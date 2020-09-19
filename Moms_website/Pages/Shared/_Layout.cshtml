@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Moms_website</title>
+    <title>@ViewData["Title"] - @Resources._Layout.Title</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -33,21 +33,21 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="Rooms.html" id="navbardrop" data-toggle="dropdown">V&aelig;relser</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="Rooms.html">Alle V&aelig;relser</a>
-                        <a class="dropdown-item" href="SkoleStuen.html">Skolestuen</a>
-                        <a class="dropdown-item" href="familyRoom.html">Familiev&aelig;relset</a>
-                        <a class="dropdown-item" href="bigroom.html">Dobbeltv&aelig;relset</a>
-                        <a class="dropdown-item" href="smallRoom.html">Enkeltv&aelig;relset</a>
+                        <a class="dropdown-item" asp-page="/Rooms/Index">@Resources._Layout.All_Rooms</a>
+                        <a class="dropdown-item" asp-page="/Rooms/FamilyRoom">@Resources._Layout.Family_Room</a>
+                        <a class="dropdown-item" asp-page="/Rooms/DoubleRoom">@Resources._Layout.Double_Room</a>
+                        <a class="dropdown-item" asp-page="/Rooms/SingleRoom">@Resources._Layout.Single_Room</a>
+                        <a class="dropdown-item" asp-page="/Rooms/WorkshopRoom">@Resources._Layout.Workshop_Room</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="facilities.html">Faciliteter</a>
+                    <a class="nav-link" asp-page="/Facilities">@Resources._Layout.Facilities</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="mon.html">Møn</a>
+                    <a class="nav-link" asp-page="/Mon">@Resources._Layout.Mon</a>
                 </li>
                 <li>
-                    <a class="nav-link" asp-page="/Contact">Kontakt</a>
+                    <a class="nav-link" asp-page="/Contact">@Resources._Layout.Contact_us</a>
                 </li>
             </ul>
         </div>
@@ -55,7 +55,7 @@
     </nav>
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container-fluid">
         @RenderBody()
         <hr />
         <footer class="footer-distributed">

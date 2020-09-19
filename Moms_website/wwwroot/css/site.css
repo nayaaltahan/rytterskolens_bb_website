@@ -79,7 +79,7 @@ button {
 }
 
 #roomsandprices, .header {
-    background-color: rgba(85,107,47);
+    background-color: rgba(85,107,47,0.7);
     color: white;
     padding: 30px;
 }
@@ -265,5 +265,3 @@ button {
                 margin-left: 0;
             }
 }
-
-
